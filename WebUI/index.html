@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Sorry! No webpage, please navigate to /api</h1>
+
+    <p>Please use a REST client such as: <a href="https://chrome.google.com/webstore/detail/simple-rest-client/fhjcajmcbmldlhcimfajhfbgofnpcjmb?hl=en" target="_blank">Simple REST Client for Google Chrome</a> to perform POST's and PUT's (List of routes can be found at /api) or you can use just the browser for GET's</p>
+
+    <p>Please ensure you have a database called 'DapperExample' on your server with 2 tables using the following schema:</p>
+
+    <h2>User</h2>
+
+    <pre>
+        <code>
+        public class User
+        {
+            public int Id { get; set; }
+            public string FullName { get; set; }
+            public string UserName { get; set; }
+
+            #region FK's
+            public int RoleId { get; set; }
+            #endregion
+        }
+        </code>
+    </pre>
+
+    <h2>Role</h2>
+
+    <pre>
+        <code>
+        public class Role
+        {
+            public int Id { get; set; }
+            public string RoleName { get; set; }
+        }
+        </code>
+    </pre>
+</body>
+</html>
