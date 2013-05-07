@@ -7,6 +7,5 @@ namespace DomainModel.Contracts
 {
     public interface IUserRepository : IRepository<User>
     {
-        void ChangeUserRole(int userId, int roleId);
     }
 }

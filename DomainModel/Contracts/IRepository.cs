@@ -10,6 +10,7 @@ namespace DomainModel.Contracts
     {
         int Add(T entity);
         void Remove(T entity);
+        void Remove(int id);
         void Update(T entity);
         T GetById(int id);
         List<T> GetAll();

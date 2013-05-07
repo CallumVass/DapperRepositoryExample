@@ -12,12 +12,5 @@ namespace DataAccess
 {
     public sealed class UserRepository : Repository<User>, IUserRepository
     {
-        public void ChangeUserRole(int userId, int roleId)
-        {
-            var user = GetById(userId);
-            user.RoleId = roleId;
-            Update(user);
-
-        }
     }
 }

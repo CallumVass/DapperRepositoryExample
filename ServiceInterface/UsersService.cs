@@ -60,7 +60,8 @@ namespace ServiceInterface
             return _userRepo.Add(new User
             {
                 FullName = request.FullName,
-                UserName = request.UserName
+                UserName = request.UserName,
+                RoleId = request.RoleId
             });
         }
 
@@ -70,13 +71,14 @@ namespace ServiceInterface
             {
                 FullName = request.FullName,
                 UserName = request.UserName,
-                Id = request.Id
+                Id = request.Id,
+                RoleId = request.RoleId
             });
         }
 
-        public void Put(UpdateUserRole request)
+        public void Delete(RemoveUser request)
         {
-            _userRepo.ChangeUserRole(request.UserId, request.RoleId);
+            _userRepo.Remove(request.Id);
         }
     }
 }

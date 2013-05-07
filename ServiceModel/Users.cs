@@ -27,12 +27,12 @@ namespace ServiceModel
         public int Id { get; set; }
         public string UserName { get; set; }
         public string FullName { get; set; }
+        public int RoleId { get; set; }
     }
 
-    [Route("/users/{UserId}/role/{RoleId}", "PUT")]
-    public class UpdateUserRole : IReturnVoid
+    [Route("/users/{Id}", "DELETE")]
+    public class RemoveUser : IReturnVoid
     {
-        public int UserId { get; set; }
-        public int RoleId { get; set; }
+        public int Id { get; set; }
     }
 }

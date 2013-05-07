@@ -74,5 +74,11 @@ namespace DataAccess
                 return cn.GetList<T>(predicate).ToList();
             }
         }
+
+        public void Remove(int id)
+        {
+            var entity = GetById(id);
+            Remove(entity);
+        }
     }
 }
